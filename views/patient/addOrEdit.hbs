@@ -1,0 +1,43 @@
+<!--<h3>{{viewTitle}}</h3>-->
+
+<h3><b>Insert Patient Data</b></h3>
+
+<form action="/patient" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{patient._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{patient.fullName}}">
+        <div class="text-danger">
+            {{patient.fullNameError}}</div>
+    </div>
+
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" name="address" placeholder="Patient's Address" value="{{patient.address}}">
+        <div class="text-danger">
+            {{patient.addressError}}</div>  
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Mobile Number</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Patients's Mobile No." value="{{patient.mobile}}">
+            <div class="text-danger">
+            {{patient.mobileError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Corona Status</label>
+            <input type="text" class="form-control" name="coronaStatus" placeholder="Corona Status" value="{{patient.coronaStatus}}">
+            <div class="text-danger">
+            {{patient.coronaStatusError}}</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" style="color:#fff; border: none; padding-top:20px; padding-bottom:20px;
+        padding-left:100px; padding-right:100px; border-radius:100px; box-shadow: rgba(2, 255, 179, 0.15) 0px 2px 8px;
+        margin-right: 10px; background-color: #00edba;"><i class="fa fa-paper-plane"></i> Submit</button>
+        
+        <a style="color:#fff; border: none; padding-top:20px; padding-bottom:20px;
+        padding-left: 100px; padding-right:100px; border-radius:100px; box-shadow: rgba(2, 120, 255, 0.15) 0px 2px 8px;
+        background-color: #0069ed;" href="/patient/records"><i class="fa fa-folder-open"></i>View All</a>
+    </div>
+</form>
